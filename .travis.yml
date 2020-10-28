@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
+
+before_deploy:
+  - docker login -u 247977 -p varun@123
+
+deploy:
+  provider: script
+  script: docker push <dockeruser/nameofproject>
+  on:
+    branch: master
