@@ -7,7 +7,7 @@ script:
   - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -u <247977> -p <varun@123>
+  - docker login -u 247977 -p varun@123
 
 deploy:
   provider: script
